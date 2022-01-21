@@ -5,11 +5,11 @@
 	<key>AppId</key>
 	<string>415789243347763</string>
 	<key>Study Title</key>
-	<string>CardinalKit</string>
+	<string>GaitMate</string>
 	<key>Team Name</key>
-	<string>Stanford Byers Center for Biodesign</string>
+	<string>Remotely Identifying Temporal Risk for Falls</string>
 	<key>Email</key>
-	<string>contact@domain.com</string>
+	<string>suffbp@stanford.edu</string>
 	<key>Phone</key>
 	<string>123-456-7890</string>
 	<key>Copyright</key>
@@ -17,9 +17,9 @@
 	<key>Website</key>
 	<string>https://cardinalkit.org</string>
 	<key>Tint Color</key>
-	<string>#b6133f</string>
+	<string>#0069b4</string>
 	<key>Primary Color</key>
-	<string>#ff3961</string>
+	<string>#64bed8</string>
 	<key>Review Consent Step Text</key>
 	<string>Review Consent Form</string>
 	<key>Reason for Consent Text</key>
@@ -56,7 +56,7 @@
 	<key>Login-Sign-In-With-Facebook</key>
 	<dict>
 		<key>Enabled</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>Login-Sign-In-With-Google</key>
 	<dict>
