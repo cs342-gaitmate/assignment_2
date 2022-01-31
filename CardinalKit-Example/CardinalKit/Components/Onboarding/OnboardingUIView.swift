@@ -25,6 +25,8 @@ struct OnboardingUIView: View {
     let config = CKPropertyReader(file: "CKConfiguration")
     @State var showingOnboard = false
     @State var showingLogin = false
+    @State var showingSurvey = false
+    @State var showingTask = false
     
     var onComplete: (() -> Void)? = nil
     
@@ -117,7 +119,21 @@ struct OnboardingUIView: View {
                 Spacer()
             }
             
-            Spacer()
+            Button("Survey"){
+                self.showingSurvey.toggle()
+                self.showingTask.toggle()
+            }
+            .foregroundColor(Color.white)
+            .font(.title)
+            .padding()
+            .background(Color.blue)
+            .cornerRadius(10)
+            .sheet(isPresented: $showingTask) {
+                SurveyViewController()
+            }
+            
+            
+            
         }
     }
 }
