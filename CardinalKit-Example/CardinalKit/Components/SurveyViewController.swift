@@ -29,7 +29,7 @@ struct SurveyViewController: UIViewControllerRepresentable {
             // Step 1: Instruction step
             let instructionStep = ORKInstructionStep(identifier: "IntroStep")
             instructionStep.title = "Patient Questionnaire"
-            instructionStep.text = "This info will help your doctor keep track of how you feel"
+            instructionStep.text = "This info will help your doctor keep track of how you feel."
             
             steps += [instructionStep]
             

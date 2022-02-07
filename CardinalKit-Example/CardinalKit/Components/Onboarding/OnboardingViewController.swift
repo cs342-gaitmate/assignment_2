@@ -85,6 +85,7 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         *  that will be required to use this app!
         **************************************************************/
         // use the `ORKPasscodeStep` from ResearchKit.
+        /*
         let passcodeStep = ORKPasscodeStep(identifier: "Passcode") //NOTE: requires NSFaceIDUsageDescription in info.plist
         let type = config.read(query: "Passcode Type")
         if type == "6" {
@@ -93,6 +94,7 @@ struct OnboardingViewController: UIViewControllerRepresentable {
             passcodeStep.passcodeType = .type4Digit
         }
         passcodeStep.text = config.read(query: "Passcode Text")
+        */
         
         /* **************************************************************
         *  STEP (6): inform the user that they are done with sign-up!
@@ -110,7 +112,7 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         let introSteps: [ORKStep] = [consentStep, reviewConsentStep]
         
         // and steps regarding login / security
-        let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep, healthRecordsStep, completionStep]
+        let emailVerificationSteps = loginSteps + [healthDataStep, healthRecordsStep, completionStep]
         
         // guide the user through ALL steps
         let fullSteps = introSteps + emailVerificationSteps
