@@ -6,7 +6,6 @@
 //  Copyright © 2022 CocoaPods. All rights reserved.
 //
 
-
 import Foundation
 import SwiftUI
 import ResearchKit
@@ -16,7 +15,6 @@ struct SurveyViewController: UIViewControllerRepresentable {
     
     func makeCoordinator() -> SurveyViewCoordinator {
         SurveyViewCoordinator()
-        
     }
     
     func updateUIViewController(_ uiViewController: ORKTaskViewController, context: Context) {
@@ -35,7 +33,7 @@ struct SurveyViewController: UIViewControllerRepresentable {
             
             // Step 2: Question Step - scale format
             let healthScaleAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 5, minimumValue: 1, defaultValue: 3, step: 1, vertical: false, maximumValueDescription: "Excellent", minimumValueDescription: "Power")
-            let healthScaleQuestionStep = ORKQuestionStep(identifier: "HealthScaleQuestionStep", title: "Question # 1", question: "In general, would you say your helath is:", answer: healthScaleAnswerFormat)
+            let healthScaleQuestionStep = ORKQuestionStep(identifier: "HealthScaleQuestionStep", title: "Question # 1", question: "In general, would you say your health is:", answer: healthScaleAnswerFormat)
             
             steps += [healthScaleQuestionStep]
             
@@ -70,8 +68,6 @@ struct SurveyViewController: UIViewControllerRepresentable {
             summaryStep.text = "We appreciate your time."
             
             steps += [summaryStep]
-            
-            
             
             return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
         }()

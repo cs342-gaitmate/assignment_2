@@ -10,6 +10,7 @@
 		104C940827A276F000340E2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 104C940727A276F000340E2F /* GoogleService-Info.plist */; };
 		104C940A27A2791A00340E2F /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C940927A2791A00340E2F /* SurveyViewController.swift */; };
 		104C940C27A28E7600340E2F /* SurveyViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C940B27A28E7600340E2F /* SurveyViewCoordinator.swift */; };
+		1089FAC327B3B38F0054133A /* PainSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1089FAC227B3B38F0054133A /* PainSurvey.swift */; };
 		27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */; };
 		2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */; };
 		2B19DD9426FE1D2600649CE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9326FE1D2600649CE1 /* TestViewController.swift */; };
@@ -113,6 +114,7 @@
 		104C940727A276F000340E2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		104C940927A2791A00340E2F /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		104C940B27A28E7600340E2F /* SurveyViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewCoordinator.swift; sourceTree = "<group>"; };
+		1089FAC227B3B38F0054133A /* PainSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainSurvey.swift; sourceTree = "<group>"; };
 		270AF36127872C13002945A7 /* CardinalKit_ExampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardinalKit_ExampleRelease.entitlements; sourceTree = "<group>"; };
 		27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskListItemView.swift; sourceTree = "<group>"; };
 		2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonToSurvey.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0A438F244A4A0400656518 /* TaskSamples.swift */,
+				1089FAC227B3B38F0054133A /* PainSurvey.swift */,
 				8E7FFFBC25DE38E4002982B4 /* CoffeeChartDataSource.swift */,
 				8E0A4391244A4A0400656518 /* LocalTaskItem.swift */,
 				2BD5328426C30F2E00C4636E /* CloudTaskItem.swift */,
@@ -794,6 +797,7 @@
 				E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */,
 				8E6E1E16253524500024B8DF /* WithdrawalViewController.swift in Sources */,
 				E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */,
+				1089FAC327B3B38F0054133A /* PainSurvey.swift in Sources */,
 				8E6E1E2A2535398D0024B8DF /* HelpView.swift in Sources */,
 				8E9CDED02591AC4A00C8A228 /* CKHealthKitManager.swift in Sources */,
 				8E0A43C2244A4A0400656518 /* ConsentDocument.swift in Sources */,
