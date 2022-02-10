@@ -86,6 +86,8 @@
 		8EA664B42594387900B6A45A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B32594387900B6A45A /* Errors.swift */; };
 		8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
+		D314690627B48E0E0096E8D4 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690527B48E0E0096E8D4 /* ActiveViewController.swift */; };
+		D314690827B4914C0096E8D4 /* GaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690727B4914C0096E8D4 /* GaitViewController.swift */; };
 		D3CD04D327B0EC1E00C5F5A3 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
 		E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */; };
@@ -192,6 +194,8 @@
 		8EA664B32594387900B6A45A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CardinalKit.swift"; sourceTree = "<group>"; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
+		D314690527B48E0E0096E8D4 /* ActiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
+		D314690727B4914C0096E8D4 /* GaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaitViewController.swift; sourceTree = "<group>"; };
 		D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		E235077624F7082700CC1899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginExistingUserViewController.swift; sourceTree = "<group>"; };
@@ -434,6 +438,8 @@
 				8E6E1E23253537580024B8DF /* MainUIView.swift */,
 				D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */,
 				104C940927A2791A00340E2F /* SurveyViewController.swift */,
+				D314690527B48E0E0096E8D4 /* ActiveViewController.swift */,
+				D314690727B4914C0096E8D4 /* GaitViewController.swift */,
 				104C940B27A28E7600340E2F /* SurveyViewCoordinator.swift */,
 				E29143FB24E74AD100EE97B2 /* LaunchUIView.swift */,
 				8E0A4399244A4A0400656518 /* Onboarding */,
@@ -773,7 +779,9 @@
 				2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */,
 				8E0A43B5244A4A0400656518 /* LocalTaskItem.swift in Sources */,
 				2BD5328326C2CC4E00C4636E /* CkResearchSurveysManager.swift in Sources */,
+				D314690627B48E0E0096E8D4 /* ActiveViewController.swift in Sources */,
 				8E6E1E2C253539AE0024B8DF /* ChangePasscodeView.swift in Sources */,
+				D314690827B4914C0096E8D4 /* GaitViewController.swift in Sources */,
 				8E0A43AD244A4A0400656518 /* Constants.swift in Sources */,
 				8E0A43BE244A4A0400656518 /* CKHealthDataStepViewController.swift in Sources */,
 				2BF6452026C1DBE70020C206 /* CK_ORKSerialization.swift in Sources */,

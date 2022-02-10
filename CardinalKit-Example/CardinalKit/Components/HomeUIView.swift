@@ -23,6 +23,15 @@ struct HomeUIView: View {
     @State var listItemsPerHeader = [String:[CloudTaskItem]]()
     @State var listItemsSections = [String]()
     
+    @State var showingOnboardingSurvey = false
+    @State var showingOnboardingTask = false
+    
+    @State var showingMonthlySurvey = false
+    @State var showingMonthlyTask = false
+    
+    @State var showingGaitSurvey = false
+    @State var showingGaitTask = false
+    
     let localListItems = LocalTaskItem.allValues
     var localListItemsPerHeader = [String:[LocalTaskItem]]()
     var localListItemsSections = [String]()
@@ -116,10 +125,12 @@ struct HomeUIView: View {
                 Spacer()
                 
                 Button(action: {
+                    self.showingMonthlySurvey.toggle()
+                    self.showingMonthlyTask.toggle()
  
                 }, label: {
-                    Image(systemName: "figure.walk")
-                    Text("Walking Task")
+                    Image(systemName: "square.and.pencil")
+                    Text("Monthly Survey")
                 })
                     .padding(Metrics.PADDING_BUTTON_LABEL)
                     .foregroundColor(Color.white)
@@ -128,6 +139,61 @@ struct HomeUIView: View {
                     .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
                     .background(self.color)
                     .cornerRadius(10)
+                    .sheet(isPresented: $showingMonthlyTask) {
+                      ActiveViewController()
+                    }
+                
+                Spacer()
+            }
+            
+            HStack {
+                
+                Spacer()
+                
+                Button(action: {
+                    self.showingGaitSurvey.toggle()
+                    self.showingGaitTask.toggle()
+ 
+                }, label: {
+                    Image(systemName: "figure.walk")
+                    Text("Gait Task")
+                })
+                    .padding(Metrics.PADDING_BUTTON_LABEL)
+                    .foregroundColor(Color.white)
+                    .font(.title)
+                    .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
+                    .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
+                    .background(self.color)
+                    .cornerRadius(10)
+                    .sheet(isPresented: $showingGaitTask) {
+                      GaitViewController()
+                    }
+                
+                Spacer()
+            }
+            
+            HStack {
+                
+                Spacer()
+                
+                Button(action: {
+                    self.showingOnboardingSurvey.toggle()
+                    self.showingOnboardingTask.toggle()
+ 
+                }, label: {
+                    Image(systemName: "square.and.pencil")
+                    Text("Onboarding Survey")
+                })
+                    .padding(Metrics.PADDING_BUTTON_LABEL)
+                    .foregroundColor(Color.white)
+                    .font(.title)
+                    .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
+                    .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
+                    .background(self.color)
+                    .cornerRadius(10)
+                    .sheet(isPresented: $showingOnboardingTask) {
+                      SurveyViewController()
+                    }
                 
                 Spacer()
             }
