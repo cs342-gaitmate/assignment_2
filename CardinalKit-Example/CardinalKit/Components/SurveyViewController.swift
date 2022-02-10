@@ -72,7 +72,6 @@ struct SurveyViewController: UIViewControllerRepresentable {
             steps += [summaryStep]
             
             
-            
             return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
         }()
         

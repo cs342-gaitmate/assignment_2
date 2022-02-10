@@ -192,7 +192,7 @@ struct HomeUIView: View {
                     .background(self.color)
                     .cornerRadius(10)
                     .sheet(isPresented: $showingOnboardingTask) {
-                      SurveyViewController()
+                      BaselineSurveyViewController()
                     }
                 
                 Spacer()

@@ -88,6 +88,7 @@
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
 		D314690627B48E0E0096E8D4 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690527B48E0E0096E8D4 /* ActiveViewController.swift */; };
 		D314690827B4914C0096E8D4 /* GaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690727B4914C0096E8D4 /* GaitViewController.swift */; };
+		D314690A27B4B8E20096E8D4 /* BaselineSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690927B4B8E20096E8D4 /* BaselineSurveyViewController.swift */; };
 		D3CD04D327B0EC1E00C5F5A3 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
 		E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */; };
@@ -196,6 +197,7 @@
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
 		D314690527B48E0E0096E8D4 /* ActiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
 		D314690727B4914C0096E8D4 /* GaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaitViewController.swift; sourceTree = "<group>"; };
+		D314690927B4B8E20096E8D4 /* BaselineSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineSurveyViewController.swift; sourceTree = "<group>"; };
 		D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		E235077624F7082700CC1899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginExistingUserViewController.swift; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 			children = (
 				8E6E1E23253537580024B8DF /* MainUIView.swift */,
 				D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */,
+				D314690927B4B8E20096E8D4 /* BaselineSurveyViewController.swift */,
 				104C940927A2791A00340E2F /* SurveyViewController.swift */,
 				D314690527B48E0E0096E8D4 /* ActiveViewController.swift */,
 				D314690727B4914C0096E8D4 /* GaitViewController.swift */,
@@ -762,6 +765,7 @@
 				8EA664232592E57200B6A45A /* SensorsDemoUIView.swift in Sources */,
 				8E6E1E3225353ABE0024B8DF /* ProfileUIView.swift in Sources */,
 				8E6E1E1E253528F50024B8DF /* SupportView.swift in Sources */,
+				D314690A27B4B8E20096E8D4 /* BaselineSurveyViewController.swift in Sources */,
 				8E6E1E1C253528D70024B8DF /* ReportView.swift in Sources */,
 				8E6E1E26253537E40024B8DF /* TasksUIView.swift in Sources */,
 				8E9CDEAD259170AD00C8A228 /* CKCareKitManager.swift in Sources */,
