@@ -33,7 +33,7 @@
 	<key>Completion Step Title</key>
 	<string>Welcome aboard.</string>
 	<key>Completion Step Text</key>
-	<string>This step concludes the onboarding and consent process of the CardinalKit framework. Next up, you will see main app functionality.</string>
+	<string>This step concludes the onboarding and consent process of the GaitMate app. Next up, you will see main app functionality.</string>
 	<key>Failed Login Title</key>
 	<string>Unable to Login 😔</string>
 	<key>Failed Login Text</key>
@@ -41,11 +41,11 @@
 	<key>Health Permissions Title</key>
 	<string>Permission to read Activity Data 🏃🏽‍♀️</string>
 	<key>Health Permissions Text</key>
-	<string>Use this text to provide an explanation to your app participants about what activity data you intend to read from the Health app and why. This sample will read step count, distance, heart rate, and flights climbed data.</string>
+	<string>This app will read step count, distance, and accelerometer data from your phone. The data is used to predict the fall risk.</string>
 	<key>Health Records</key>
 	<dict>
 		<key>Enabled</key>
-		<true/>
+		<false/>
 		<key>Permissions Text</key>
 		<string>Use this text to provide an explanation to your app participants about what electronic health records (EHR) you intend to collect from the Health app and why. This sample will read all available records (for which permission is granted).</string>
 		<key>Permissions Title</key>
@@ -109,74 +109,74 @@
 		<key>Overview</key>
 		<dict>
 			<key>Title</key>
-			<string>Hi there! 👋🏽</string>
+			<string>Welcome! </string>
 			<key>Summary</key>
-			<string>CardinalKit is a suite of tools designed to help you build a digital health app experience from the ground up. It integrates with Firebase to provide full-stack solutions. We hope you enjoy the love poured into this sample and make many great things with it!</string>
+			<string>GaitMate is a research app from Stanford Hospital that was created in cooperation with the Stanford Byers Center for Biodesign. By facilitating at home functional mobility assessment, it helps estimate an individual’s risk of falling, and informs strategies to reduce this risk.</string>
 			<key>Content</key>
-			<string>CardinalKit is a suite of tools designed to help you build a digital health app experience from the ground up. It integrates with Firebase to provide full-stack solutions. We hope you enjoy the love poured into this sample and make many great things with it!</string>
+			<string>GaitMate is a research app from Stanford Hospital that was created in cooperation with the Stanford Byers Center for Biodesign. By facilitating at home functional mobility assessment, it helps estimate an individual’s risk of falling, and informs strategies to reduce this risk.</string>
 		</dict>
 		<key>DataGathering</key>
 		<dict>
 			<key>Title</key>
 			<string>Data Gathering</string>
 			<key>Summary</key>
-			<string>Here you should write a bit about what data you are collecting, and why.</string>
+			<string>This app collects data that can help estimate an individual’s risk of falling and informs strategies to reduce this risk. This includes monthly self-report and mobility assessments.</string>
 			<key>Content</key>
-			<string>Here you should write a bit about what data you are collecting, and why. Additional content written here will show in final consent review form and generated PDF.</string>
+			<string>This app collects data that can help estimate an individual’s risk of falling and informs strategies to reduce this risk. This includes monthly self-report and mobility assessments.</string>
 		</dict>
 		<key>Privacy</key>
 		<dict>
 			<key>Title</key>
 			<string>Privacy</string>
 			<key>Summary</key>
-			<string>What is your commitment in terms of data protection to your app participants? Who will have access to data?</string>
+			<string>Your data is stored securely without personally identifiable information.</string>
 			<key>Content</key>
-			<string>What is your commitment in terms of data protection to your app participants? Who will have access to data? Additional content written here will show in final consent review form and generated PDF.</string>
+			<string>Your data is stored securely without personally identifiable information.</string>
 		</dict>
 		<key>DataUse</key>
 		<dict>
 			<key>Title</key>
 			<string>Data Use</string>
 			<key>Summary</key>
-			<string>Information about your team&apos;s use of data.</string>
+			<string>The data gathered is used for research purposes at Stanford Hospital.</string>
 			<key>Content</key>
-			<string>Information about your team&apos;s use of data. Additional content.</string>
+			<string>The data gathered is used for research purposes at Stanford Hospital.</string>
 		</dict>
 		<key>TimeCommitment</key>
 		<dict>
 			<key>Title</key>
 			<string>Time Commitment</string>
 			<key>Summary</key>
-			<string>Information about the expected time commitment per app participant.</string>
+			<string>When first using the app you will be asked to fill out an onboarding survey, which takes about 10 minutes. The app also asks you to perform a monthly mobility assessment and short survey, which also takes about 10 minutes.</string>
 			<key>Content</key>
-			<string>Information about the expected time commitment per app participant. Additional content.</string>
+			<string>When first using the app you will be asked to provide some basic demographic and health information. Filling out the onboarding survey takes about 10 minutes. The app also asks you to perform a monthly mobility assessment and short survey, which also takes about 10 minutes.</string>
 		</dict>
 		<key>StudySurvey</key>
 		<dict>
 			<key>Title</key>
 			<string>Study Survey</string>
 			<key>Summary</key>
-			<string>Information about any survey(s) in the app.</string>
+			<string>The app contains two surveys. The first onboardning survey will ask you to provide basic demographic and health information. The second survey is a short monthly check-in to see if anything has changed since the last time we asked you.</string>
 			<key>Content</key>
-			<string>Information about any survey(s) in the app. Additional content.</string>
+			<string>The app contains two surveys. The first onboardning survey will ask you to provide basic demographic and health information. The second survey is a short monthly check-in to see if anything has changed since the last time we asked you.</string>
 		</dict>
 		<key>StudyTasks</key>
 		<dict>
 			<key>Title</key>
 			<string>Study Tasks</string>
 			<key>Summary</key>
-			<string>Information about any task(s) in the app.</string>
+			<string>The main task the app is asking you to do is a walking task. You will be asked to put your cell phone into a pouch around your hips, stand up and walk 10 feet back and forth and sit down again. That&apos;s it!</string>
 			<key>Content</key>
-			<string>Information about any task(s) in the app. Additional content.</string>
+			<string>The main task the app is asking you to do is a walking task. You will be asked to put your cell phone into a pouch around your hips, stand up and walk 10 feet back and forth and sit down again. That&apos;s it!</string>
 		</dict>
 		<key>Withdrawing</key>
 		<dict>
 			<key>Title</key>
 			<string>Withdrawing</string>
 			<key>Summary</key>
-			<string>What should your study participants know about the withdrawing process of your study?</string>
+			<string>If you want to withdraw from the study, please notify your contact person at Stanford Hospital.</string>
 			<key>Content</key>
-			<string>What should your study participants know about the withdrawing process of your study? Additional content.</string>
+			<string>If you want to withdraw from the study, please notify your contact person at Stanford Hospital.</string>
 		</dict>
 	</dict>
 	<key>Onboarding</key>
