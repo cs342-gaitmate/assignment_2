@@ -43,29 +43,53 @@ struct OnboardingUIView: View {
     }
 
     var body: some View {
+        
+        let gradient = Gradient(colors: [color.self, .white] )
+        
+        LinearGradient(gradient: gradient, startPoint: .bottomTrailing, endPoint: .topLeading)
+            .edgesIgnoringSafeArea(.vertical)
+            .overlay (
+        
         VStack(spacing: 10) {
             Spacer()
             
             Image("SBDLogoGrey")
                 .resizable()
                 .scaledToFit()
+                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN*6)
+                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN*6)
+            
+            Spacer(minLength: 40)
+            
+            Image("GaitMate")
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(10)
+                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN*7)
+                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN*7)
+            
+            /*
+            Text(config.read(query: "Study Title"))
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .font(.system(size: 38, weight: .bold, design: .default))
+                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
+                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
+            */
+            
+            Spacer()
+                .frame(height: 20)
+            
+            Text(config.read(query: "Team Name"))
+                .multilineTextAlignment(.center)
+                .font(.system(size: 22, design: .default))
                 .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN*4)
                 .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN*4)
             
-            Spacer(minLength: 2)
-            
-            Text(config.read(query: "Study Title"))
-                .foregroundColor(self.color)
-                .multilineTextAlignment(.center)
-                .font(.system(size: 35, weight: .bold, design: .default))
-                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
-                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
-            
-            Text(config.read(query: "Team Name"))
-                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
-                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
 
+            /*
             PageView(self.onboardingElements.map { InfoView(logo: $0.logo, title: $0.title, description: $0.description, color: self.color) })
+            */
 
             Spacer()
             
@@ -77,8 +101,8 @@ struct OnboardingUIView: View {
                      Text("Join Study")
                         .padding(Metrics.PADDING_BUTTON_LABEL)
                         .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .background(self.color)
+                        .foregroundColor(color.self)
+                        .background(Color.white)
                         .cornerRadius(Metrics.RADIUS_CORNER_BUTTON)
                         .font(.system(size: 20, weight: .bold, design: .default))
                 })
@@ -101,11 +125,11 @@ struct OnboardingUIView: View {
                      Text("I'm a Returning User")
                         .padding(Metrics.PADDING_BUTTON_LABEL)
                         .frame(maxWidth: .infinity)
-                        .foregroundColor(self.color)
+                        .foregroundColor(.white)
                         .font(.system(size: 20, weight: .bold, design: .default))
                         .overlay(
                                     RoundedRectangle(cornerRadius: Metrics.RADIUS_CORNER_BUTTON)
-                                        .stroke(self.color, lineWidth: 2)
+                                        .stroke(.white, lineWidth: 2)
                             )
                 })
                 .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
@@ -118,24 +142,31 @@ struct OnboardingUIView: View {
         
                 Spacer()
             }
-            
-            Button("Survey"){
-                self.showingSurvey.toggle()
-                self.showingTask.toggle()
+            /*
+            HStack {
+                Spacer()
+                Button("Survey"){
+                    self.showingSurvey.toggle()
+                    self.showingTask.toggle()
+                }
+                .padding(Metrics.PADDING_BUTTON_LABEL)
+                .foregroundColor(Color.white)
+                .font(.title)
+                .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
+                .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
+                //.padding()
+                .background(self.color)
+                .cornerRadius(10)
+                .sheet(isPresented: $showingTask) {
+                    SurveyViewController()
+                }
+                Spacer()
             }
-            .foregroundColor(Color.white)
-            .font(.title)
-            .padding()
-            .background(Color.blue)
-            .cornerRadius(10)
-            .sheet(isPresented: $showingTask) {
-                SurveyViewController()
-            }
-            
-            
-            
+            */
+            Spacer()
+                .frame(height: 30)
         }
-    }
+    )
 }
 
 struct InfoView: View {
@@ -170,4 +201,5 @@ struct OnboardingUIView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingUIView()
     }
+}
 }
