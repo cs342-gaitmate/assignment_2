@@ -25,7 +25,7 @@ struct TaskSamples {
     static let sampleWalkingTask: ORKOrderedTask = {
         let intendedUseDescription = "Tests ability to walk"
         
-        return ORKOrderedTask.shortWalk(withIdentifier: "ShortWalkTask", intendedUseDescription: intendedUseDescription, numberOfStepsPerLeg: 20, restDuration: 30, options: ORKPredefinedTaskOption())
+        return ORKOrderedTask.shortWalk(withIdentifier: "ShortWalkTask", intendedUseDescription: intendedUseDescription, numberOfStepsPerLeg: 10, restDuration: 10, options: ORKPredefinedTaskOption())
     }()
     
     /**

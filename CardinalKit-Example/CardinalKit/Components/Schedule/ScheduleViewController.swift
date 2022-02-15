@@ -186,7 +186,8 @@ class ScheduleViewController: OCKDailyPageViewController {
     
     override func dailyPageViewController(_ dailyPageViewController: OCKDailyPageViewController, prepare listViewController: OCKListViewController, for date: Date) {
         
-        let identifiers = ["steps", "surveys", "painSurvey"]
+        //let identifiers = ["steps", "surveys", "painSurvey", "sampleWalkingTask"]
+        let identifiers = ["sampleWalkingTask"]
         var query = OCKTaskQuery(for: date)
         query.ids = identifiers
         query.excludesTasksWithNoEvents = true
@@ -200,8 +201,8 @@ class ScheduleViewController: OCKDailyPageViewController {
                 /* TIP VIEW */
                 
                 // Add a non-CareKit view into the list
-                let tipTitle = "Customize your app!"
-                let tipText = "Start with the CKConfiguration.plist file."
+                let tipTitle = "Your GaitMate Schedule!"
+                let tipText = "Complete your daily tasks and fill your rings."
                 
                 // Only show the tip view on the current date
                 if Calendar.current.isDate(date, inSameDayAs: Date()) {
@@ -212,6 +213,7 @@ class ScheduleViewController: OCKDailyPageViewController {
                     listViewController.appendView(tipView, animated: false)
                 }
                 
+                 
                 /* NUMERIC PROGRESS TASK VIEW */
                 
                 if #available(iOS 14, *), let walkTask = tasks.first(where: { $0.id == "steps" }) {
@@ -226,7 +228,7 @@ class ScheduleViewController: OCKDailyPageViewController {
                 }
                 
                 /* PAIN SURVEY */
-                
+                /*
                 if let surveyTask = tasks.first(where: { $0.id == "painSurvey" }) {
                     let surveyCard = SurveyItemViewController(
                         viewSynchronizer: SurveyItemViewSynchronizer(),
@@ -236,9 +238,20 @@ class ScheduleViewController: OCKDailyPageViewController {
                     
                     listViewController.appendViewController(surveyCard, animated: false)
                 }
+                 */
+                
+                if let sampleWalkingTask = tasks.first(where: { $0.id == "sampleWalkingTask" }) {
+                    let surveyCard = SurveyItemViewController(
+                        viewSynchronizer: SurveyItemViewSynchronizer(),
+                        task: sampleWalkingTask,
+                        eventQuery: .init(for: date),
+                        storeManager: self.storeManager)
+                    
+                    listViewController.appendViewController(surveyCard, animated: false)
+                }
                 
                 /* PAIN CHART */
-                
+                /*
                 let painGradientStart = UIColor { traitCollection -> UIColor in
                     return traitCollection.userInterfaceStyle == .light ? #colorLiteral(red: 0.9960784314, green: 0.3725490196, blue: 0.368627451, alpha: 1) : #colorLiteral(red: 0.8627432641, green: 0.2630574384, blue: 0.2592858295, alpha: 1)
                 }
@@ -269,7 +282,7 @@ class ScheduleViewController: OCKDailyPageViewController {
                 insightsCard.chartView.headerView.detailLabel.text = "This Week"
                 insightsCard.chartView.headerView.accessibilityLabel = "Pain, This Week"
                 listViewController.appendViewController(insightsCard, animated: false)
-                
+                */
                 
                 /* LOAD SURVEYS FROM CLOUD */
                 

@@ -410,13 +410,17 @@ internal extension OCKStore {
         
         // Add ResearchKit Survey
         let thisMorning = Calendar.current.startOfDay(for: Date())
-        let surveyElement = OCKScheduleElement(start: thisMorning, end: nil, interval: DateComponents(day: 1))
+        let surveyElement = OCKScheduleElement(start: thisMorning, end: nil, interval: DateComponents(month: 1))
         let surveySchedule = OCKSchedule(composing: [surveyElement])
         var survey = OCKTask(id: "painSurvey", title: "Take the pain survey 📝", carePlanUUID: nil, schedule: surveySchedule)
         survey.impactsAdherence = true
         survey.instructions = "Rate your pain."
         
-        addTasks([survey], callbackQueue: .main, completion: nil)
+        var gaitTask = OCKTask(id: "sampleWalkingTask", title: "Sample Walking Test", carePlanUUID: nil, schedule: surveySchedule)
+        gaitTask.impactsAdherence = true
+        gaitTask.instructions = "Functional Mobility Assessment"
+        
+        addTasks([gaitTask], callbackQueue: .main, completion: nil)
         
         createContacts()
     }
