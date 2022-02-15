@@ -32,6 +32,9 @@ struct HomeUIView: View {
     @State var showingGaitSurvey = false
     @State var showingGaitTask = false
     
+    @State var showingReportFallSurvey = false
+    @State var showingReportFallTask = false
+    
     let localListItems = LocalTaskItem.allValues
     var localListItemsPerHeader = [String:[LocalTaskItem]]()
     var localListItemsSections = [String]()
@@ -104,6 +107,8 @@ struct HomeUIView: View {
                 Spacer()
                 
                 Button(action: {
+                    self.showingReportFallSurvey.toggle()
+                    self.showingReportFallTask.toggle()
  
                 }, label: {
                     Image(systemName: "square.and.pencil")
@@ -116,6 +121,9 @@ struct HomeUIView: View {
                     .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
                     .background(self.color)
                     .cornerRadius(10)
+                    .sheet(isPresented: $showingReportFallTask) {
+                      ReportFallViewController()
+                    }
                 
                 Spacer()
             }

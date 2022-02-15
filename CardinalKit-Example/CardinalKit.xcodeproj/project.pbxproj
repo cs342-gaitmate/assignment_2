@@ -11,6 +11,7 @@
 		104C940A27A2791A00340E2F /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C940927A2791A00340E2F /* SurveyViewController.swift */; };
 		104C940C27A28E7600340E2F /* SurveyViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C940B27A28E7600340E2F /* SurveyViewCoordinator.swift */; };
 		1089FAC327B3B38F0054133A /* PainSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1089FAC227B3B38F0054133A /* PainSurvey.swift */; };
+		10C6BA8D27B8480D0022429C /* ReportFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6BA8C27B8480D0022429C /* ReportFallViewController.swift */; };
 		27653A13272A2E7700D74E83 /* LocalTaskListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */; };
 		2B19DD9226FE1BEB00649CE1 /* JsonToSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */; };
 		2B19DD9426FE1D2600649CE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19DD9326FE1D2600649CE1 /* TestViewController.swift */; };
@@ -118,6 +119,7 @@
 		104C940927A2791A00340E2F /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		104C940B27A28E7600340E2F /* SurveyViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewCoordinator.swift; sourceTree = "<group>"; };
 		1089FAC227B3B38F0054133A /* PainSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainSurvey.swift; sourceTree = "<group>"; };
+		10C6BA8C27B8480D0022429C /* ReportFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFallViewController.swift; sourceTree = "<group>"; };
 		270AF36127872C13002945A7 /* CardinalKit_ExampleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardinalKit_ExampleRelease.entitlements; sourceTree = "<group>"; };
 		27653A12272A2E7700D74E83 /* LocalTaskListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskListItemView.swift; sourceTree = "<group>"; };
 		2B19DD9126FE1BEB00649CE1 /* JsonToSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonToSurvey.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 			children = (
 				8E6E1E23253537580024B8DF /* MainUIView.swift */,
 				D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */,
+				10C6BA8C27B8480D0022429C /* ReportFallViewController.swift */,
 				D314690927B4B8E20096E8D4 /* BaselineSurveyViewController.swift */,
 				104C940927A2791A00340E2F /* SurveyViewController.swift */,
 				D314690527B48E0E0096E8D4 /* ActiveViewController.swift */,
@@ -772,6 +775,7 @@
 				8E6E1E1C253528D70024B8DF /* ReportView.swift in Sources */,
 				8E6E1E26253537E40024B8DF /* TasksUIView.swift in Sources */,
 				8E9CDEAD259170AD00C8A228 /* CKCareKitManager.swift in Sources */,
+				10C6BA8D27B8480D0022429C /* ReportFallViewController.swift in Sources */,
 				8EA664892593213000B6A45A /* CKSendHelper.swift in Sources */,
 				8E6E1E3425353AFE0024B8DF /* EmailHelper.swift in Sources */,
 				8E6E1E24253537580024B8DF /* MainUIView.swift in Sources */,
