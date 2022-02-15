@@ -127,32 +127,7 @@ struct HomeUIView: View {
                 
                 Spacer()
             }
-            
-            HStack {
-                
-                Spacer()
-                
-                Button(action: {
-                    self.showingMonthlySurvey.toggle()
-                    self.showingMonthlyTask.toggle()
- 
-                }, label: {
-                    Image(systemName: "square.and.pencil")
-                    Text("Monthly Survey")
-                })
-                    .padding(Metrics.PADDING_BUTTON_LABEL)
-                    .foregroundColor(Color.white)
-                    .font(.title)
-                    .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
-                    .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
-                    .background(self.color)
-                    .cornerRadius(10)
-                    .sheet(isPresented: $showingMonthlyTask) {
-                      ActiveViewController()
-                    }
-                
-                Spacer()
-            }
+        
             
             HStack {
                 
@@ -164,7 +139,7 @@ struct HomeUIView: View {
  
                 }, label: {
                     Image(systemName: "figure.walk")
-                    Text("Gait Task")
+                    Text("Monthly Assessment")
                 })
                     .padding(Metrics.PADDING_BUTTON_LABEL)
                     .foregroundColor(Color.white)
@@ -174,7 +149,7 @@ struct HomeUIView: View {
                     .background(self.color)
                     .cornerRadius(10)
                     .sheet(isPresented: $showingGaitTask) {
-                      GaitViewController()
+                        return AnyView(CKTaskViewController(tasks: TaskSamples.sampleWalkingTask))
                     }
                 
                 Spacer()
