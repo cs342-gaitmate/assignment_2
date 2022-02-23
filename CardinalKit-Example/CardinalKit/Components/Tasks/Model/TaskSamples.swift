@@ -276,7 +276,7 @@ struct TaskSamples {
             ORKTextChoice(text: "Are there handrails on both sides of the stairs?", value: 3 as NSCoding & NSCopying & NSObjectProtocol)
         ]
         let stairsFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: stairsChoices)
-        let stairsItem = ORKFormItem(identifier: "stairsItem", text: "Stairs Questions", answerFormat: numStandardFormat)
+        let stairsItem = ORKFormItem(identifier: "stairsItem", text: "Stairs Questions", answerFormat: stairsFormat)
         
         let floorsChoices = [
             ORKTextChoice(text: "When you walk through a room, do you have to walk around furniture?", value: 0 as NSCoding & NSCopying & NSObjectProtocol),

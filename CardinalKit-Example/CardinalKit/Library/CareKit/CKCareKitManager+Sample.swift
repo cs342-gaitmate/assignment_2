@@ -413,7 +413,7 @@ internal extension OCKStore {
         let surveyElement = OCKScheduleElement(start: thisMorning, end: nil, interval: DateComponents(month: 1))
         let surveySchedule = OCKSchedule(composing: [surveyElement])
         var survey = OCKTask(id: "painSurvey", title: "Take the pain survey 📝", carePlanUUID: nil, schedule: surveySchedule)
-        survey.impactsAdherence = true
+        survey.impactsAdherence = false
         survey.instructions = "Rate your pain."
         
         var gaitTask = OCKTask(id: "sampleWalkingTask", title: "Sample Walking Test", carePlanUUID: nil, schedule: surveySchedule)

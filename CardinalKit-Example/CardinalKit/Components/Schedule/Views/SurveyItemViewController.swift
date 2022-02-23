@@ -118,9 +118,6 @@ class SurveyItemViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
     // 3b. This method will be called when the user completes the survey.
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
-        
-        
-        
         guard reason == .completed else {
             taskView.completionButton.isSelected = false
             return
