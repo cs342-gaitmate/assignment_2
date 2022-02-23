@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Icon_Art (Edit Me).png",
+      "filename" : "GaitMate-02-white.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Icon_Art (Edit Me)@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Icon_Art (Edit Me)@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
