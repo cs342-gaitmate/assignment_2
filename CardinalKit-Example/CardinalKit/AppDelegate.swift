@@ -4,9 +4,12 @@
 //  Created for the CardinalKit Framework.
 //  Copyright © 2019 Stanford University. All rights reserved.
 //
+
 import UIKit
 import Firebase
 import ResearchKit
+import UserNotifications
+import UserNotificationsUI
 
 // import facebook
 import FBSDKCoreKit
@@ -47,6 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     application,
                     didFinishLaunchingWithOptions: launchOptions
                 )
+
+        // Request permission to send user notifications
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("push notifications granted")
+            }
+        }
         
         return true
     }
@@ -82,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+
 // Extensions add new functionality to an existing class, structure, enumeration, or protocol type.
 // https://docs.swift.org/swift-book/LanguageGuide/Extensions.html
 extension AppDelegate {
@@ -107,5 +118,14 @@ extension AppDelegate {
 }
 
 
-
-
+// MARK: - UNUserNotificationCenterDelegate
+// adding notifications when app is in foreground
+extension AppDelegate: UNUserNotificationCenterDelegate {
+      func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void
+      ) {
+        completionHandler(.banner)
+      }
+}

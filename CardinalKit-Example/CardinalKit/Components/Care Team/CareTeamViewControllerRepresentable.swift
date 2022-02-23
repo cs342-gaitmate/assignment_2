@@ -18,8 +18,10 @@ struct CareTeamViewControllerRepresentable: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
         let manager = CKCareKitManager.shared
         
+
         let viewController = OCKContactsListViewController(storeManager: manager.synchronizedStoreManager)
         viewController.title = "Care Team"
+
         
         return UINavigationController(rootViewController: viewController)
     }
