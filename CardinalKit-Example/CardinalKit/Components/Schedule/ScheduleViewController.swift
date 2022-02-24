@@ -201,7 +201,7 @@ class ScheduleViewController: OCKDailyPageViewController {
                 /* TIP VIEW */
                 
                 // Add a non-CareKit view into the list
-                let tipTitle = "Your GaitMate Schedule!"
+                let tipTitle = "Your GaitMate Schedule:"
                 let tipText = "Complete your daily tasks and fill your rings."
                 
                 // Only show the tip view on the current date
@@ -209,7 +209,7 @@ class ScheduleViewController: OCKDailyPageViewController {
                     let tipView = TipView()
                     tipView.headerView.titleLabel.text = tipTitle
                     tipView.headerView.detailLabel.text = tipText
-                    tipView.imageView.image = UIImage(named: "GraphicOperatingSystem")
+                    tipView.imageView.image = UIImage(named: "walking_man_2")
                     listViewController.appendView(tipView, animated: false)
                 }
                 

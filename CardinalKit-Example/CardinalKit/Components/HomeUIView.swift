@@ -106,6 +106,36 @@ struct HomeUIView: View {
                 Spacer()
                 
                 Button(action: {
+                    self.showingOnboardingSurvey.toggle()
+                    self.showingOnboardingTask.toggle()
+ 
+                }, label: {
+                    Image(systemName: "square.and.pencil")
+                        .padding(.leading)
+                    Text("Onboarding Survey")
+                })
+                    .padding(Metrics.PADDING_BUTTON_LABEL)
+                    .foregroundColor(Color.white)
+                    .font(.title)
+                    .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
+                    .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
+                    .frame(maxWidth:300)
+                    .frame(minWidth:300)
+                    .background(self.color)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+                    .sheet(isPresented: $showingOnboardingTask) {
+                      BaselineSurveyViewController()
+                    }
+                
+                Spacer()
+            }
+            
+            HStack {
+                
+                Spacer()
+                
+                Button(action: {
                     self.showingReportFallSurvey.toggle()
                     self.showingReportFallTask.toggle()
  
@@ -160,35 +190,6 @@ struct HomeUIView: View {
                 Spacer()
             }
             
-            HStack {
-                
-                Spacer()
-                
-                Button(action: {
-                    self.showingOnboardingSurvey.toggle()
-                    self.showingOnboardingTask.toggle()
- 
-                }, label: {
-                    Image(systemName: "square.and.pencil")
-                        .padding(.leading)
-                    Text("Onboarding Survey")
-                })
-                    .padding(Metrics.PADDING_BUTTON_LABEL)
-                    .foregroundColor(Color.white)
-                    .font(.title)
-                    .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
-                    .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
-                    .frame(maxWidth:300)
-                    .frame(minWidth:300)
-                    .background(self.color)
-                    .cornerRadius(10)
-                    .shadow(radius: 2)
-                    .sheet(isPresented: $showingOnboardingTask) {
-                      BaselineSurveyViewController()
-                    }
-                
-                Spacer()
-            }
         }
         )
     }

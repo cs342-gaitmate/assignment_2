@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "walking_man_2.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

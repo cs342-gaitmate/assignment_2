@@ -41,11 +41,11 @@
 	<key>Health Permissions Title</key>
 	<string>Permission to read Activity Data 🏃🏽‍♀️</string>
 	<key>Health Permissions Text</key>
-	<string>This app will read step count, distance, and accelerometer data from your phone. The data is used to predict the fall risk.</string>
+	<string>This app will read step count, distance, and accelerometer data from your phone. This data is used to predict fall risk.</string>
 	<key>Health Records</key>
 	<dict>
 		<key>Enabled</key>
-		<false/>
+		<true/>
 		<key>Permissions Text</key>
 		<string>Use this text to provide an explanation to your app participants about what electronic health records (EHR) you intend to collect from the Health app and why. This sample will read all available records (for which permission is granted).</string>
 		<key>Permissions Title</key>
@@ -78,7 +78,7 @@
 		<string>Sign in using your Apple ID is fast and easy, and Apple will not track any of your activities.</string>
 	</dict>
 	<key>Login-Passwordless</key>
-	<false/>
+	<true/>
 	<key>Login Step Title</key>
 	<string>Almost done!</string>
 	<key>Login Step Text</key>
@@ -111,18 +111,18 @@
 			<key>Title</key>
 			<string>Welcome! </string>
 			<key>Summary</key>
-			<string>GaitMate is a research app from Stanford Hospital that was created in cooperation with the Stanford Byers Center for Biodesign. By facilitating at home functional mobility assessment, it helps estimate an individual’s risk of falling, and informs strategies to reduce this risk.</string>
+			<string>GaitMate is a research app from Stanford Health Care that was created in cooperation with the Stanford Byers Center for Biodesign. By facilitating at-home functional mobility assessment, it helps estimate an individual’s risk of falling, and informs strategies to reduce this risk.</string>
 			<key>Content</key>
-			<string>GaitMate is a research app from Stanford Hospital that was created in cooperation with the Stanford Byers Center for Biodesign. By facilitating at home functional mobility assessment, it helps estimate an individual’s risk of falling, and informs strategies to reduce this risk.</string>
+			<string>GaitMate is a research app from Stanford Health Care that was created in cooperation with the Stanford Byers Center for Biodesign. By facilitating at-home functional mobility assessment, it helps estimate an individual’s risk of falling, and informs strategies to reduce this risk.</string>
 		</dict>
 		<key>DataGathering</key>
 		<dict>
 			<key>Title</key>
 			<string>Data Gathering</string>
 			<key>Summary</key>
-			<string>This app collects data that can help estimate an individual’s risk of falling and informs strategies to reduce this risk. This includes monthly self-report and mobility assessments.</string>
+			<string>This app collects survey and mobility data that can help estimate an individual&apos;s risk of falling, and inform strategies to reduce this risk.</string>
 			<key>Content</key>
-			<string>This app collects data that can help estimate an individual’s risk of falling and informs strategies to reduce this risk. This includes monthly self-report and mobility assessments.</string>
+			<string>This app collects survey and mobility data that can help estimate an individual&apos;s risk of falling, and inform strategies to reduce this risk.</string>
 		</dict>
 		<key>Privacy</key>
 		<dict>
@@ -138,45 +138,45 @@
 			<key>Title</key>
 			<string>Data Use</string>
 			<key>Summary</key>
-			<string>The data gathered is used for research purposes at Stanford Hospital.</string>
+			<string>The data gathered is used for research purposes at Stanford Health Care.</string>
 			<key>Content</key>
-			<string>The data gathered is used for research purposes at Stanford Hospital.</string>
+			<string>The data gathered is used for research purposes at Stanford Health Care.</string>
 		</dict>
 		<key>TimeCommitment</key>
 		<dict>
 			<key>Title</key>
 			<string>Time Commitment</string>
 			<key>Summary</key>
-			<string>When first using the app you will be asked to fill out an onboarding survey, which takes about 10 minutes. The app also asks you to perform a monthly mobility assessment and short survey, which also takes about 10 minutes.</string>
+			<string>When first using the app, you will be asked to complete a 10 minute survey. Each month, you will be asked to complete a brief survey and mobility assessment, which also takes about 10 minutes.</string>
 			<key>Content</key>
-			<string>When first using the app you will be asked to provide some basic demographic and health information. Filling out the onboarding survey takes about 10 minutes. The app also asks you to perform a monthly mobility assessment and short survey, which also takes about 10 minutes.</string>
+			<string>When first using the app, you will be asked to complete a 10 minute survey. Each month, you will be asked to complete a brief survey and mobility assessment, which also takes about 10 minutes.</string>
 		</dict>
 		<key>StudySurvey</key>
 		<dict>
 			<key>Title</key>
 			<string>Study Survey</string>
 			<key>Summary</key>
-			<string>The app contains two surveys. The first onboardning survey will ask you to provide basic demographic and health information. The second survey is a short monthly check-in to see if anything has changed since the last time we asked you.</string>
+			<string>The app contains two surveys. The first onboarding survey will ask you to provide basic demographic and health information. The second survey is a short monthly check-in to see if anything has changed since the last time we asked you.</string>
 			<key>Content</key>
-			<string>The app contains two surveys. The first onboardning survey will ask you to provide basic demographic and health information. The second survey is a short monthly check-in to see if anything has changed since the last time we asked you.</string>
+			<string>The app contains two surveys. The first onboarding survey will ask you to provide basic demographic and health information. The second survey is a short monthly check-in to see if anything has changed since the last time we asked you.</string>
 		</dict>
 		<key>StudyTasks</key>
 		<dict>
 			<key>Title</key>
 			<string>Study Tasks</string>
 			<key>Summary</key>
-			<string>The main task the app is asking you to do is a walking task. You will be asked to put your cell phone into a pouch around your hips, stand up and walk 10 feet back and forth and sit down again. That&apos;s it!</string>
+			<string>Once a month, you will be asked to perform a mobility assessment. This involves placing your phone in a pouch around your waist, standing up, walking 10 feet back and forth, and sitting down again. That’s it!</string>
 			<key>Content</key>
-			<string>The main task the app is asking you to do is a walking task. You will be asked to put your cell phone into a pouch around your hips, stand up and walk 10 feet back and forth and sit down again. That&apos;s it!</string>
+			<string>Once a month, you will be asked to perform a mobility assessment. This involves placing your phone in a pouch around your waist, standing up, walking 10 feet back and forth, and sitting down again. That’s it!</string>
 		</dict>
 		<key>Withdrawing</key>
 		<dict>
 			<key>Title</key>
 			<string>Withdrawing</string>
 			<key>Summary</key>
-			<string>If you want to withdraw from the study, please notify your contact person at Stanford Hospital.</string>
+			<string>If you want to withdraw from the study, please notify Brian Suffoletto (suffbp@stanford.edu) or David Kim (davidak@stanford.edu) at Stanford Health Care.</string>
 			<key>Content</key>
-			<string>If you want to withdraw from the study, please notify your contact person at Stanford Hospital.</string>
+			<string>If you want to withdraw from the study, please notify Brian Suffoletto (suffbp@stanford.edu) or David Kim (davidak@stanford.edu) at Stanford Health Care.</string>
 		</dict>
 	</dict>
 	<key>Onboarding</key>
