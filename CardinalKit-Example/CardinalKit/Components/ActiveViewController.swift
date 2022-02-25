@@ -28,7 +28,7 @@ struct ActiveViewController: UIViewControllerRepresentable {
             // Step 1: Video Instruction step
             let videoInstructionStep = ORKVideoInstructionStep(identifier: "videoInstructionStep")
                 videoInstructionStep.title = NSLocalizedString("Video Instruction Step", comment: "")
-                videoInstructionStep.videoURL = URL(string: "https://www.apple.com/media/us/researchkit/2016/a63aa7d4_e6fd_483f_a59d_d962016c8093/films/carekit/researchkit-carekit-cc-us-20160321_r848-9dwc.mov")
+                videoInstructionStep.videoURL = URL(string: "https://drive.google.com/uc?export=open&id=1dRJGpB1m7OzyxwFWkGOxyFdXagFUOahN")
                 videoInstructionStep.thumbnailTime = 2 // Customizable thumbnail timestamp
             steps += [videoInstructionStep]
             

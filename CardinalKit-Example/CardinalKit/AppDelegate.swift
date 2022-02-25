@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftUI
+import os
 import Firebase
 import ResearchKit
 import UserNotifications
@@ -16,10 +18,14 @@ import FBSDKCoreKit
 
 import GoogleSignIn
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //@StateObject var notificationCenter = NotificationCenter2()
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -50,13 +56,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     application,
                     didFinishLaunchingWithOptions: launchOptions
                 )
-
+    
         // Request permission to send user notifications
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if granted {
                 print("push notifications granted")
             }
         }
+        /*
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (allowed, error) in
+             //This callback does not trigger on main loop be careful
+            if allowed {
+              os_log(.debug, "Notifications Allowed") //import os
+            } else {
+              os_log(.debug, "Error")
+            }
+        }
+         */
         
         return true
     }
@@ -90,6 +106,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
     
+    // get push token for push notifications
+    //No callback in simulator
+    //-- must use device to get valid push token
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
+        print("device token")
+        print(deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) { print(error.localizedDescription)
+    }
+    
 }
 
 
@@ -117,7 +144,7 @@ extension AppDelegate {
     
 }
 
-
+/*
 // MARK: - UNUserNotificationCenterDelegate
 // adding notifications when app is in foreground
 extension AppDelegate: UNUserNotificationCenterDelegate {
@@ -129,3 +156,4 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         completionHandler(.banner)
       }
 }
+*/

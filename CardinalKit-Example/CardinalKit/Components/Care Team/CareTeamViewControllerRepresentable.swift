@@ -21,7 +21,6 @@ struct CareTeamViewControllerRepresentable: UIViewControllerRepresentable {
 
         let viewController = OCKContactsListViewController(storeManager: manager.synchronizedStoreManager)
         viewController.title = "Care Team"
-
         
         return UINavigationController(rootViewController: viewController)
     }

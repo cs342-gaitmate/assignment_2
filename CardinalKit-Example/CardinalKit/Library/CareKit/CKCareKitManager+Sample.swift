@@ -245,6 +245,7 @@ extension OCKHealthKitPassthroughStore {
 import CareKit
 import CareKitStore
 import Contacts
+import CareKitUI
 import UIKit
 import FirebaseFirestore
 
@@ -427,31 +428,22 @@ internal extension OCKStore {
     
     func createContacts() {
         
-        var contact1 = OCKContact(id: "brian", givenName: "Brian",
+        var contact1 = OCKContact(id: "about_the_study", givenName: "About",
+                                  familyName: "GaitMate", carePlanUUID: nil)
+        contact1.asset = "AboutGaitMate"
+        contact1.title = "Remotely Identifying Temporal Risk for Falls "
+        contact1.role = "GaitMate is an app to assess the risk of falls in older adults. The idea for the app was created by the two Stanford clinicians Brian Suffoletto and David Kim, who have conducted research on this topic for several years. Together with a team of students from the Stanford Byers Center for Biodesign the idea was brought to life. By using this app and participating in this study you are contributing to fall prevention. We thank you very much for your commitment and time! If you have further questions about this project feel free to reach out."
+        ()
+        
+        var contact2 = OCKContact(id: "brian", givenName: "Brian",
                                   familyName: "Suffoletto", carePlanUUID: nil)
-        contact1.asset = "BrianSuffoletto"
-        contact1.title = "Emergency Physician"
-        contact1.role = "Dr. Brian Suffoletto is a practicing emergency physician at the Stanford Emergency Department."
-        contact1.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "suffbp@stanford.edu")]
-        contact1.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(111) 111-1111")]
-        contact1.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(111) 111-1111")]
+        contact2.asset = "BrianSuffoletto"
+        contact2.title = "Emergency Physician"
+        contact2.role = "Dr. Brian Suffoletto is a practicing emergency physician at the Stanford Emergency Department."
+        contact2.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "suffbp@stanford.edu")]
+        contact2.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(111) 111-1111")]
+        contact2.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(111) 111-1111")]
         
-        contact1.address = {
-            let address = OCKPostalAddress()
-            address.street = "900 Welch Rd Ste 350"
-            address.city = "Stanford"
-            address.state = "CA"
-            address.postalCode = "94305"
-            return address
-        }()
-        
-        var contact2 = OCKContact(id: "david", givenName: "David",
-                                  familyName: "Kim", carePlanUUID: nil)
-        contact2.asset = "DavidKim"
-        contact2.title = "Emergency Department"
-        contact2.role = "Dr. David Kim is a practicing emergency physician at the Stanford Emergency Department."
-        contact2.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(650) 725-9445")]
-        contact2.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(650) 723-0121 (fax)")]
         contact2.address = {
             let address = OCKPostalAddress()
             address.street = "900 Welch Rd Ste 350"
@@ -461,10 +453,35 @@ internal extension OCKStore {
             return address
         }()
         
-        addContacts([contact2, contact1])
+        var contact3 = OCKContact(id: "david", givenName: "David",
+                                  familyName: "Kim", carePlanUUID: nil)
+        contact3.asset = "DavidKim"
+        contact3.title = "Emergency Department"
+        contact3.role = "Dr. David Kim is a practicing emergency physician at the Stanford Emergency Department."
+        contact3.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(650) 725-9445")]
+        contact3.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(650) 723-0121 (fax)")]
+        contact3.address = {
+            let address = OCKPostalAddress()
+            address.street = "900 Welch Rd Ste 350"
+            address.city = "Stanford"
+            address.state = "CA"
+            address.postalCode = "94305"
+            return address
+        }()
+        
+        addContacts([contact3, contact2, contact1])
     }
     
+    /*
+    let chartView = OCKCartesianChartView(type: .bar)
+    chartView.headerView.titleLabel.text = "Doxylamine"
+    chartView.headerView.detailLabel.text = "GaitMate is an app to assess the risk of falls in older adults. The idea for the app was created by the two Stanford clinicians Brian Suffoletto and David Kim, who have conducted research on this topic for several years. Together with a team of students from the Stanford Byers Center for Biodesign the idea was brought to life. By using this app and participating in this study you are contributing to fall prevention. We thank you very much for your commitment and time! If you have further questions about this project feel free to reach out."
+    }
+    */
+    
 }
+
+
 
 extension OCKHealthKitPassthroughStore {
     
