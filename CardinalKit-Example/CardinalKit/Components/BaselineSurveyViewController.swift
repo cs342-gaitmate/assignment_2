@@ -77,12 +77,12 @@ struct BaselineSurveyViewController: UIViewControllerRepresentable {
             // Instruction step
             let instructionStep = ORKInstructionStep(identifier: "IntroStep")
             instructionStep.title = "GaitMate Baseline Survey"
-            instructionStep.text = "This survey will help us understand some basic information about you necessary for our functional mobility assessment.If you are unsure about how to answer a question, please give the best answer you can and make a written comment beside your answer."
+            instructionStep.text = "This survey will help us understand some things about you to help us understand fall risk. If you are unsure about how to answer a question, please give the best answer you can. If you feel uncomfortable, you can skip any question."
             
             steps += [instructionStep]
             
             //Part 1: Demographics:
-            let demoAgeFormat = ORKAnswerFormat.scale(withMaximumValue: 120, minimumValue: 65, defaultValue: 80, step: 5, vertical: false, maximumValueDescription: "120", minimumValueDescription: "65")
+            let demoAgeFormat = ORKAnswerFormat.scale(withMaximumValue: 120, minimumValue: 65, defaultValue: 80, step: 5, vertical: false, maximumValueDescription: "100+", minimumValueDescription: "65")
             let ageItem = ORKFormItem(identifier: "ageItem", text: "What is your age in years:", answerFormat: demoAgeFormat)
             
             let sexChoices = [
@@ -100,46 +100,34 @@ struct BaselineSurveyViewController: UIViewControllerRepresentable {
                 ORKTextChoice(text: "Native Hawaiian or Pacific Islander", value: 3 as NSCoding & NSCopying & NSObjectProtocol),
                 ORKTextChoice(text: "Native American", value: 4 as NSCoding & NSCopying & NSObjectProtocol),
                 ORKTextChoice(text: "Asian", value: 5 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Multiracial", value: 6 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Other", value: 7 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Prefer not to Answer", value: 8 as NSCoding & NSCopying & NSObjectProtocol)
+                ORKTextChoice(text: "Other", value: 6 as NSCoding & NSCopying & NSObjectProtocol),
+                ORKTextChoice(text: "Prefer not to Answer", value: 7 as NSCoding & NSCopying & NSObjectProtocol)
             ]
             let raceChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: raceChoices)
             let raceItem = ORKFormItem(identifier: "raceItem", text: "What is your race?", answerFormat: raceChoiceAnswerFormat)
             
             let ethnicityChoices = [
-                ORKTextChoice(text: "Hispanic or Latino", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "NOT Hispanic or Latino", value: 1 as NSCoding & NSCopying & NSObjectProtocol)
+                ORKTextChoice(text: "Yes", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
+                ORKTextChoice(text: "No", value: 1 as NSCoding & NSCopying & NSObjectProtocol)
             ]
             let ethnicityChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: ethnicityChoices)
-            let ethnicityItem = ORKFormItem(identifier: "ethnicityItem", text: "Describe your ethnicity?", answerFormat: ethnicityChoiceAnswerFormat)
+            let ethnicityItem = ORKFormItem(identifier: "ethnicityItem", text: "Do you identify as Hispanic or Latino?", answerFormat: ethnicityChoiceAnswerFormat)
             
             /*
             let heightFormat = ORKAnswerFormat.scale(withMaximumValue: 100, minimumValue: 0, defaultValue: 50, step: 10, vertical: false, maximumValueDescription: "100", minimumValueDescription: "0")
             let heightItem = ORKFormItem(identifier: "heightItem", text: "What is your height (in inches):", answerFormat: heightFormat)
             */
-             
+            
+            //let weightFormat = ORKNumericAnswerFormat(style: ORKNumericAnswerStyle.Type, unit: "lbs", minimum: 600, maximum: 0)
             let weightFormat = ORKAnswerFormat.scale(withMaximumValue: 500, minimumValue: 0, defaultValue: 150, step: 50, vertical: false, maximumValueDescription: "500", minimumValueDescription: "0")
-            let weightItem = ORKFormItem(identifier: "weightItem", text: "Approximately how much do you weigh (in pounds):", answerFormat: weightFormat)
+            let weightItem = ORKFormItem(identifier: "weightItem", text: "How much do you weigh (lbs):", answerFormat: weightFormat)
+            
+            
             
             let demoStep = ORKFormStep(identifier: "demoStep", title: "Demographics", text: "The following questions concern your demographic information")
             demoStep.formItems = [ageItem, sexItem, raceItem, ethnicityItem, weightItem]
             
             steps += [demoStep]
-            
-            
-            //Part 2: Current Living Situation
-            /*
-            let maritalChoices = [
-                ORKTextChoice(text: "Single, never married", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Married, or in a domestic partnership", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Separated", value: 2 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Divorced", value: 3 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Widowed", value: 4 as NSCoding & NSCopying & NSObjectProtocol)
-            ]
-            let maritalFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: maritalChoices)
-            let maritalItem = ORKFormItem(identifier: "maritalItem", text: "What is your marital status?", answerFormat: maritalFormat)
-            */
             
             let liveWithChoices = [
                 ORKTextChoice(text: "By myself", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
@@ -149,19 +137,9 @@ struct BaselineSurveyViewController: UIViewControllerRepresentable {
             let liveWithFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: liveWithChoices)
             let liveWithItem = ORKFormItem(identifier: "liveWithItem", text: "Who do you currenty live with?", answerFormat: liveWithFormat)
             
-            /*
-            let leaveHomeChoices = [
-                ORKTextChoice(text: "At least once a day", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "A few times a week", value: 1 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Once per week", value: 2 as NSCoding & NSCopying & NSObjectProtocol),
-                ORKTextChoice(text: "Less than once per week", value: 3 as NSCoding & NSCopying & NSObjectProtocol),
-            ]
-            let leaveHomeFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: leaveHomeChoices)
-            let leaveHomeItem = ORKFormItem(identifier: "leaveHomeChoices", text: "How often do you leave your home?", answerFormat: liveWithFormat)
-             */
-            
-            
             let livingSituationStep = ORKFormStep(identifier: "livingSituatiomStep", title: "Current Living Situation", text: "The following questions concern your current living situation")
+            //let livingSituationStep = ORKFormStep(identifier: "livingSituatiomStep", title: "Current Living Situation", text: nil)
+
             livingSituationStep.formItems = [liveWithItem]
             
             steps += [livingSituationStep]
@@ -218,7 +196,7 @@ struct BaselineSurveyViewController: UIViewControllerRepresentable {
             let anxietyItem = ORKFormItem(identifier: "anxietyItem", text: "How is your mental health?", answerFormat: anxietyFormat)
             
             let overallFormat = ORKAnswerFormat.scale(withMaximumValue: 100, minimumValue: 0, defaultValue: 50, step: 50, vertical: false, maximumValueDescription: "100", minimumValueDescription: "0")
-            let overallItem = ORKFormItem(identifier: "overallItem", text: "This scale is numbered from 0 to 100 (100 means the best health you can imagine and 0 means the worst health you can imagine). Indicate your health TODAY on the scale:", answerFormat: overallFormat)
+            let overallItem = ORKFormItem(identifier: "overallItem", text: "How would you rate your current overall health from 0-100, where 0 is the worst health you can imagine, and 100 is the best?", answerFormat: overallFormat)
             
             let qualityStep = ORKFormStep(identifier: "qualityStep", title: "Quality of Life", text: "Under each heading, please tick ONE box that best describes your health TODAY")
             qualityStep.formItems = [mobilityItem, careItem, activitiesItem, painItem, anxietyItem, overallItem]
