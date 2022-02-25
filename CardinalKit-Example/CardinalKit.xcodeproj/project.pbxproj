@@ -91,10 +91,14 @@
 		D314690627B48E0E0096E8D4 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690527B48E0E0096E8D4 /* ActiveViewController.swift */; };
 		D314690827B4914C0096E8D4 /* GaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690727B4914C0096E8D4 /* GaitViewController.swift */; };
 		D314690A27B4B8E20096E8D4 /* BaselineSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690927B4B8E20096E8D4 /* BaselineSurveyViewController.swift */; };
+		D36BC86927C84B2E0019311B /* NotificationCenter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BC86827C84B2E0019311B /* NotificationCenter2.swift */; };
+		D36BC86B27C84BE10019311B /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BC86A27C84BE10019311B /* LocalNotification.swift */; };
+		D36BC86F27C84E3E0019311B /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BC86E27C84E3E0019311B /* LocalNotificationView.swift */; };
+		D36BC87127C860320019311B /* NotificationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BC87027C860320019311B /* NotificationStep.swift */; };
 		D3C49CC527C57A08004520CD /* LaunchUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C49CC427C57A08004520CD /* LaunchUIViewController.swift */; };
 		D3C49CC927C5C613004520CD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C49CC827C5C613004520CD /* NotificationView.swift */; };
 		D3CD04D327B0EC1E00C5F5A3 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */; };
-		D3D5A0ED27C465FE009FAB06 /* NotificationManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5A0EC27C465FE009FAB06 /* NotificationManagerView.swift */; };
+		D3D5A0ED27C465FE009FAB06 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5A0EC27C465FE009FAB06 /* NotificationManager.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
 		E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */; };
 		E29143FC24E74AD100EE97B2 /* LaunchUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29143FB24E74AD100EE97B2 /* LaunchUIView.swift */; };
@@ -206,10 +210,14 @@
 		D314690527B48E0E0096E8D4 /* ActiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
 		D314690727B4914C0096E8D4 /* GaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaitViewController.swift; sourceTree = "<group>"; };
 		D314690927B4B8E20096E8D4 /* BaselineSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineSurveyViewController.swift; sourceTree = "<group>"; };
+		D36BC86827C84B2E0019311B /* NotificationCenter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter2.swift; sourceTree = "<group>"; };
+		D36BC86A27C84BE10019311B /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		D36BC86E27C84E3E0019311B /* LocalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationView.swift; sourceTree = "<group>"; };
+		D36BC87027C860320019311B /* NotificationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStep.swift; sourceTree = "<group>"; };
 		D3C49CC427C57A08004520CD /* LaunchUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUIViewController.swift; sourceTree = "<group>"; };
 		D3C49CC827C5C613004520CD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
-		D3D5A0EC27C465FE009FAB06 /* NotificationManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerView.swift; sourceTree = "<group>"; };
+		D3D5A0EC27C465FE009FAB06 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		D412204D566355618D21C8AA /* Pods-CardinalKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E235077624F7082700CC1899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E2680B1A260A72DD00B755EA /* LoginExistingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginExistingUserViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +372,7 @@
 			children = (
 				8E0A43A0244A4A0400656518 /* Views */,
 				D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */,
+				D36BC87027C860320019311B /* NotificationStep.swift */,
 				8E0A439D244A4A0400656518 /* CKHealthDataStepViewController.swift */,
 				8EA6648625930B6B00B6A45A /* CKHealthRecordsStepViewController.swift */,
 				8E0A439F244A4A0400656518 /* PasswordlessLoginStep.swift */,
@@ -458,9 +467,9 @@
 				D314690727B4914C0096E8D4 /* GaitViewController.swift */,
 				104C940B27A28E7600340E2F /* SurveyViewCoordinator.swift */,
 				E29143FB24E74AD100EE97B2 /* LaunchUIView.swift */,
-				D3D5A0EC27C465FE009FAB06 /* NotificationManagerView.swift */,
 				8E0A4399244A4A0400656518 /* Onboarding */,
 				8E9CDEA525915F6600C8A228 /* Schedule */,
+				D36BC86727C82E800019311B /* Notifications */,
 				8E9CDEB42591818200C8A228 /* Care Team */,
 				8E0A438D244A4A0400656518 /* Tasks */,
 				8E0A4379244A4A0400656518 /* Profile */,
@@ -549,6 +558,17 @@
 				7862CAF1055B6118CA7F559E /* Pods-CardinalKit_Example.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D36BC86727C82E800019311B /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D3D5A0EC27C465FE009FAB06 /* NotificationManager.swift */,
+				D36BC86827C84B2E0019311B /* NotificationCenter2.swift */,
+				D36BC86A27C84BE10019311B /* LocalNotification.swift */,
+				D36BC86E27C84E3E0019311B /* LocalNotificationView.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -782,13 +802,14 @@
 				8E6E1E1E253528F50024B8DF /* SupportView.swift in Sources */,
 				D314690A27B4B8E20096E8D4 /* BaselineSurveyViewController.swift in Sources */,
 				8E6E1E1C253528D70024B8DF /* ReportView.swift in Sources */,
+				D36BC86B27C84BE10019311B /* LocalNotification.swift in Sources */,
 				8E6E1E26253537E40024B8DF /* TasksUIView.swift in Sources */,
 				8E9CDEAD259170AD00C8A228 /* CKCareKitManager.swift in Sources */,
 				10C6BA8D27B8480D0022429C /* ReportFallViewController.swift in Sources */,
 				8EA664892593213000B6A45A /* CKSendHelper.swift in Sources */,
 				8E6E1E3425353AFE0024B8DF /* EmailHelper.swift in Sources */,
 				8E6E1E24253537580024B8DF /* MainUIView.swift in Sources */,
-				D3D5A0ED27C465FE009FAB06 /* NotificationManagerView.swift in Sources */,
+				D3D5A0ED27C465FE009FAB06 /* NotificationManager.swift in Sources */,
 				8E6E1E182535263F0024B8DF /* CKTaskViewController.swift in Sources */,
 				8E9CDF142591B73900C8A228 /* CKHealthRecordsManager.swift in Sources */,
 				8EA664B42594387900B6A45A /* Errors.swift in Sources */,
@@ -811,6 +832,7 @@
 				8E9CDEB6259181B400C8A228 /* CareTeamViewControllerRepresentable.swift in Sources */,
 				8E9CDEAF259172C200C8A228 /* CKCareKitManager+Sample.swift in Sources */,
 				8E9CDEA925916E6600C8A228 /* ScheduleViewController.swift in Sources */,
+				D36BC87127C860320019311B /* NotificationStep.swift in Sources */,
 				D3C49CC527C57A08004520CD /* LaunchUIViewController.swift in Sources */,
 				2BD5328526C30F2E00C4636E /* CloudTaskItem.swift in Sources */,
 				D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */,
@@ -828,10 +850,12 @@
 				8E6E1E16253524500024B8DF /* WithdrawalViewController.swift in Sources */,
 				D3CD04D327B0EC1E00C5F5A3 /* HomeUIView.swift in Sources */,
 				E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */,
+				D36BC86927C84B2E0019311B /* NotificationCenter2.swift in Sources */,
 				1089FAC327B3B38F0054133A /* PainSurvey.swift in Sources */,
 				8E6E1E2A2535398D0024B8DF /* HelpView.swift in Sources */,
 				8E9CDED02591AC4A00C8A228 /* CKHealthKitManager.swift in Sources */,
 				8E0A43C2244A4A0400656518 /* ConsentDocument.swift in Sources */,
+				D36BC86F27C84E3E0019311B /* LocalNotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

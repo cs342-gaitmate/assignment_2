@@ -9,9 +9,19 @@
 import SwiftUI
 import UserNotifications
 
-struct NotificationManagerView: View {
+struct NotificationManager: View {
     var body: some View {
+        
         VStack {
+            
+            Button("Request Permission") {
+                // Request permission to send user notifications
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+                    if granted {
+                        print("push notifications granted")
+                    }
+                }
+            }
             
             Button("Schedule Notifications") {
                 let content = UNMutableNotificationContent()
@@ -32,7 +42,7 @@ struct NotificationManagerView: View {
                  */
 
                 // show this notification five seconds from now
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
 
                 // choose a random identifier
                 let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -44,9 +54,9 @@ struct NotificationManagerView: View {
     }
 }
 
-struct NotificationManagerView_Previews: PreviewProvider {
+struct NotificationManager_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationManagerView()
+        NotificationManager()
     }
 }
 

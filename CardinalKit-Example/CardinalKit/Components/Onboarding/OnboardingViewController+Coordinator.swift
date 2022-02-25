@@ -198,9 +198,12 @@ class OnboardingViewCoordinator: NSObject, ORKTaskViewControllerDelegate {
         // ResearchKit already provides!
 
         switch step {
+        //case is NotificationStep:
+            // show custom screen for allowing notifications
+            // return NotificationStep(step: step)
         case is CKHealthDataStep:
-            // this step lets us run custom logic to ask for
-            // HealthKit permissins when this step appears on screen.
+            //this step lets us run custom logic to ask for
+            //HealthKit permissins when this step appears on screen.
             return CKHealthDataStepViewController(step: step)
         case is CKHealthRecordsStep:
             return CKHealthRecordsStepViewController(step: step)

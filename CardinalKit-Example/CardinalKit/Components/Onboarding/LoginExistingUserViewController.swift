@@ -29,6 +29,8 @@ struct LoginExistingUserViewController: UIViewControllerRepresentable {
         let loginUserPassword = ORKLoginStep(identifier: "LoginExistingStep", title: "Login", text: "Log into this study.", loginViewControllerClass: LoginViewController.self)
         loginSteps = [signInButtons, loginUserPassword]
         
+        // schedule notifications
+        //let notificationStep = NotificationStep(identifier: "Notifications")
         
         // set health data permissions
         let healthDataStep = CKHealthDataStep(identifier: "HealthKit")
@@ -59,7 +61,9 @@ struct LoginExistingUserViewController: UIViewControllerRepresentable {
         passcodeStep.text = config.read(query: "Passcode Text")
         
         // create a task with each step
-        loginSteps += [consentReview,reviewConsentStep,healthDataStep, healthRecordsStep, passcodeStep]
+        loginSteps += [consentReview,reviewConsentStep,healthDataStep, passcodeStep]
+        //healthRecordsStep
+        //notificationStep
         
         
         
