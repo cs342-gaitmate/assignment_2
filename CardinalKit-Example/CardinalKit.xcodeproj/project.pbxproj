@@ -27,7 +27,6 @@
 		8E0A43AC244A4A0400656518 /* CKStudyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4382244A4A0400656518 /* CKStudyUser.swift */; };
 		8E0A43AD244A4A0400656518 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4384244A4A0400656518 /* Constants.swift */; };
 		8E0A43AE244A4A0400656518 /* ORKESerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4386244A4A0400656518 /* ORKESerialization.m */; };
-		8E0A43AF244A4A0400656518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0A4388244A4A0400656518 /* Assets.xcassets */; };
 		8E0A43B0244A4A0400656518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0A4389244A4A0400656518 /* LaunchScreen.storyboard */; };
 		8E0A43B3244A4A0400656518 /* TaskSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A438F244A4A0400656518 /* TaskSamples.swift */; };
 		8E0A43B5244A4A0400656518 /* LocalTaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A4391244A4A0400656518 /* LocalTaskItem.swift */; };
@@ -88,15 +87,14 @@
 		8EA664B42594387900B6A45A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA664B32594387900B6A45A /* Errors.swift */; };
 		8EBE6F9C24B3C0E60093D07C /* AppDelegate+CardinalKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
+		D308EBDA27CD8B6F00438BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0A4388244A4A0400656518 /* Assets.xcassets */; };
+		D308EBDC27CD8BAC00438BF4 /* GaitNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308EBDB27CD8BAC00438BF4 /* GaitNotificationView.swift */; };
 		D314690627B48E0E0096E8D4 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690527B48E0E0096E8D4 /* ActiveViewController.swift */; };
 		D314690827B4914C0096E8D4 /* GaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690727B4914C0096E8D4 /* GaitViewController.swift */; };
 		D314690A27B4B8E20096E8D4 /* BaselineSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314690927B4B8E20096E8D4 /* BaselineSurveyViewController.swift */; };
-		D36BC86927C84B2E0019311B /* NotificationCenter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BC86827C84B2E0019311B /* NotificationCenter2.swift */; };
-		D36BC86B27C84BE10019311B /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BC86A27C84BE10019311B /* LocalNotification.swift */; };
-		D36BC86F27C84E3E0019311B /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BC86E27C84E3E0019311B /* LocalNotificationView.swift */; };
 		D36BC87127C860320019311B /* NotificationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BC87027C860320019311B /* NotificationStep.swift */; };
 		D3C49CC527C57A08004520CD /* LaunchUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C49CC427C57A08004520CD /* LaunchUIViewController.swift */; };
-		D3C49CC927C5C613004520CD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C49CC827C5C613004520CD /* NotificationView.swift */; };
+		D3C49CC927C5C613004520CD /* FallNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C49CC827C5C613004520CD /* FallNotificationView.swift */; };
 		D3CD04D327B0EC1E00C5F5A3 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */; };
 		D3D5A0ED27C465FE009FAB06 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5A0EC27C465FE009FAB06 /* NotificationManager.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
@@ -207,15 +205,13 @@
 		8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CardinalKit.swift"; sourceTree = "<group>"; };
 		C62E5DF9E4B89DA6FD9769EC /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
+		D308EBDB27CD8BAC00438BF4 /* GaitNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaitNotificationView.swift; sourceTree = "<group>"; };
 		D314690527B48E0E0096E8D4 /* ActiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
 		D314690727B4914C0096E8D4 /* GaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaitViewController.swift; sourceTree = "<group>"; };
 		D314690927B4B8E20096E8D4 /* BaselineSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineSurveyViewController.swift; sourceTree = "<group>"; };
-		D36BC86827C84B2E0019311B /* NotificationCenter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter2.swift; sourceTree = "<group>"; };
-		D36BC86A27C84BE10019311B /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
-		D36BC86E27C84E3E0019311B /* LocalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationView.swift; sourceTree = "<group>"; };
 		D36BC87027C860320019311B /* NotificationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStep.swift; sourceTree = "<group>"; };
 		D3C49CC427C57A08004520CD /* LaunchUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUIViewController.swift; sourceTree = "<group>"; };
-		D3C49CC827C5C613004520CD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D3C49CC827C5C613004520CD /* FallNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallNotificationView.swift; sourceTree = "<group>"; };
 		D3CD04D227B0EC1E00C5F5A3 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		D3D5A0EC27C465FE009FAB06 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		D412204D566355618D21C8AA /* Pods-CardinalKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -433,7 +429,8 @@
 			isa = PBXGroup;
 			children = (
 				8E6E1E1F253529760024B8DF /* DocumentView.swift */,
-				D3C49CC827C5C613004520CD /* NotificationView.swift */,
+				D3C49CC827C5C613004520CD /* FallNotificationView.swift */,
+				D308EBDB27CD8BAC00438BF4 /* GaitNotificationView.swift */,
 				8E6E1E19253528450024B8DF /* WithdrawView.swift */,
 				8E6E1E1B253528D70024B8DF /* ReportView.swift */,
 				8E6E1E1D253528F50024B8DF /* SupportView.swift */,
@@ -564,9 +561,6 @@
 			isa = PBXGroup;
 			children = (
 				D3D5A0EC27C465FE009FAB06 /* NotificationManager.swift */,
-				D36BC86827C84B2E0019311B /* NotificationCenter2.swift */,
-				D36BC86A27C84BE10019311B /* LocalNotification.swift */,
-				D36BC86E27C84E3E0019311B /* LocalNotificationView.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -643,11 +637,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E0A43AF244A4A0400656518 /* Assets.xcassets in Resources */,
 				8E0A43B0244A4A0400656518 /* LaunchScreen.storyboard in Resources */,
 				104C940827A276F000340E2F /* GoogleService-Info.plist in Resources */,
 				E2F1FD7824D62064006C39DF /* CKConfiguration.plist in Resources */,
 				8E0A43C1244A4A0400656518 /* LoginCustomWaitStepView.xib in Resources */,
+				D308EBDA27CD8B6F00438BF4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,7 +796,6 @@
 				8E6E1E1E253528F50024B8DF /* SupportView.swift in Sources */,
 				D314690A27B4B8E20096E8D4 /* BaselineSurveyViewController.swift in Sources */,
 				8E6E1E1C253528D70024B8DF /* ReportView.swift in Sources */,
-				D36BC86B27C84BE10019311B /* LocalNotification.swift in Sources */,
 				8E6E1E26253537E40024B8DF /* TasksUIView.swift in Sources */,
 				8E9CDEAD259170AD00C8A228 /* CKCareKitManager.swift in Sources */,
 				10C6BA8D27B8480D0022429C /* ReportFallViewController.swift in Sources */,
@@ -812,6 +805,7 @@
 				D3D5A0ED27C465FE009FAB06 /* NotificationManager.swift in Sources */,
 				8E6E1E182535263F0024B8DF /* CKTaskViewController.swift in Sources */,
 				8E9CDF142591B73900C8A228 /* CKHealthRecordsManager.swift in Sources */,
+				D308EBDC27CD8BAC00438BF4 /* GaitNotificationView.swift in Sources */,
 				8EA664B42594387900B6A45A /* Errors.swift in Sources */,
 				8E6E1E1225351F830024B8DF /* DocumentPreviewViewController.swift in Sources */,
 				8E6E1E20253529760024B8DF /* DocumentView.swift in Sources */,
@@ -824,7 +818,7 @@
 				D314690627B48E0E0096E8D4 /* ActiveViewController.swift in Sources */,
 				8E6E1E2C253539AE0024B8DF /* ChangePasscodeView.swift in Sources */,
 				D314690827B4914C0096E8D4 /* GaitViewController.swift in Sources */,
-				D3C49CC927C5C613004520CD /* NotificationView.swift in Sources */,
+				D3C49CC927C5C613004520CD /* FallNotificationView.swift in Sources */,
 				8E0A43AD244A4A0400656518 /* Constants.swift in Sources */,
 				8E0A43BE244A4A0400656518 /* CKHealthDataStepViewController.swift in Sources */,
 				2BF6452026C1DBE70020C206 /* CK_ORKSerialization.swift in Sources */,
@@ -850,12 +844,10 @@
 				8E6E1E16253524500024B8DF /* WithdrawalViewController.swift in Sources */,
 				D3CD04D327B0EC1E00C5F5A3 /* HomeUIView.swift in Sources */,
 				E2680B1B260A72DD00B755EA /* LoginExistingUserViewController.swift in Sources */,
-				D36BC86927C84B2E0019311B /* NotificationCenter2.swift in Sources */,
 				1089FAC327B3B38F0054133A /* PainSurvey.swift in Sources */,
 				8E6E1E2A2535398D0024B8DF /* HelpView.swift in Sources */,
 				8E9CDED02591AC4A00C8A228 /* CKHealthKitManager.swift in Sources */,
 				8E0A43C2244A4A0400656518 /* ConsentDocument.swift in Sources */,
-				D36BC86F27C84E3E0019311B /* LocalNotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,20 +60,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Request permission to send user notifications
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if granted {
-                print("push notifications granted")
+                //------------------Report Fall Notification--------------------//
+                print("schedule fall notification")
+    
+                let content1 = UNMutableNotificationContent()
+                content1.title = "Report A Fall"
+                content1.subtitle = "Did you fall this past week?"
+                content1.sound = UNNotificationSound.default
+
+                // Configure the recurring date
+                var dateComponents1 = DateComponents()
+                dateComponents1.calendar = Calendar.current
+
+                dateComponents1.weekday = 2  // Monday
+                dateComponents1.hour = 15    // 14:00 / 2pm
+                dateComponents1.minute = 38
+                
+                let trigger1 = UNCalendarNotificationTrigger(
+                         dateMatching: dateComponents1, repeats: true)
+                
+                // show this notification five seconds from now
+                //let trigger1 = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+                
+                // choose a random identifier
+                let request1 = UNNotificationRequest(identifier: "Report_Fall", content: content1, trigger: trigger1)
+                
+                //------------------Gait Task Notification--------------------//
+                    
+                print("schedule gait notification")
+                
+                let content2 = UNMutableNotificationContent()
+                content2.title = "Gait Task"
+                content2.subtitle = "Time for your monthly mobility assessment"
+                content2.sound = UNNotificationSound.default
+                
+                // Configure the recurring date
+                var dateComponents2 = DateComponents()
+                dateComponents2.calendar = Calendar.current
+
+                dateComponents2.weekOfMonth = 4
+                dateComponents2.hour = 15    // 14:00 / 2pm
+                dateComponents2.minute = 35
+                
+                let trigger2 = UNCalendarNotificationTrigger(
+                         dateMatching: dateComponents2, repeats: true)
+
+                // show this notification five seconds from now
+                //let trigger2 = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+                
+                // choose a random identifier
+                let request2 = UNNotificationRequest(identifier: "Gait_Task", content: content2, trigger: trigger2)
+
+                // add both notification requests to notification center
+                UNUserNotificationCenter.current().add(request1)
+                UNUserNotificationCenter.current().add(request2)
             }
         }
-        /*
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (allowed, error) in
-             //This callback does not trigger on main loop be careful
-            if allowed {
-              os_log(.debug, "Notifications Allowed") //import os
-            } else {
-              os_log(.debug, "Error")
-            }
-        }
-         */
-        
         return true
     }
     

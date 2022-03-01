@@ -6,6 +6,7 @@
 //  Copyright © 2022 CocoaPods. All rights reserved.
 //
 
+/*
 import SwiftUI
 import UserNotifications
 
@@ -60,3 +61,4 @@ struct NotificationManager_Previews: PreviewProvider {
     }
 }
 
+*/
