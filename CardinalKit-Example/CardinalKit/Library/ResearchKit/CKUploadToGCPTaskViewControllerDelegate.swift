@@ -11,20 +11,27 @@ import ResearchKit
 import Firebase
 
 class CKUploadToGCPTaskViewControllerDelegate : NSObject, ORKTaskViewControllerDelegate {
-        
+    
     public func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         switch reason {
         case .completed:
-           do {
+            do {
                 // (1) convert the result of the ResearchKit task into a JSON dictionary
                 //if let json = try CKTaskResultAsJson(taskViewController.result) {
-                if let json = try   CK_ORKSerialization.CKTaskAsJson(result: taskViewController.result,task: taskViewController.task!) {
+                if let json = try CK_ORKSerialization.CKTaskAsJson(result: taskViewController.result,task: taskViewController.task!) {
+                    
                     // (2) send using Firebase
                     try CKSendJSON(json)
                     
                     // (3) if we have any files, send those using Google Storage
                     if let associatedFiles = taskViewController.outputDirectory {
-                        try CKSendFiles(associatedFiles, result: json)
+                        if let taskType = json["identifier"] as? String {
+                            if taskType == "ShortWalkTask" {
+                                try sendWalkTaskResults(associatedFiles, result: json)
+                            } else {
+                                try CKSendFiles(associatedFiles, result: json)
+                            }
+                        }
                     }
                 }
             } catch {
@@ -38,11 +45,11 @@ class CKUploadToGCPTaskViewControllerDelegate : NSObject, ORKTaskViewControllerD
     }
     
     /**
-    Create an output directory for a given task.
-    You may move this directory.
+     Create an output directory for a given task.
+     You may move this directory.
      
      - Returns: URL with directory location
-    */
+     */
     func CKGetTaskOutputDirectory(_ taskViewController: ORKTaskViewController) -> URL? {
         do {
             let defaultFileManager = FileManager.default
@@ -66,11 +73,11 @@ class CKUploadToGCPTaskViewControllerDelegate : NSObject, ORKTaskViewControllerD
     /**
      Parse a result from a ResearchKit task and convert to a dictionary.
      JSON-friendly.
-
+     
      - Parameters:
-        - result: original `ORKTaskResult`
+     - result: original `ORKTaskResult`
      - Returns: [String:Any] dictionary with ResearchKit `ORKTaskResult`
-    */
+     */
     func CKTaskResultAsJson(_ result: ORKTaskResult) throws -> [String:Any]? {
         let jsonData = try ORKESerializer.jsonData(for: result)
         return try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any]
@@ -78,21 +85,35 @@ class CKUploadToGCPTaskViewControllerDelegate : NSObject, ORKTaskViewControllerD
     
     /**
      Given a JSON dictionary, use the Firebase SDK to store it in Firestore.
-    */
+     */
     func CKSendJSON(_ json: [String:Any]) throws {
         let identifier = (json["identifier"] as? String) ?? UUID().uuidString
-            
+        
         try CKSendHelper.appendResearchKitResultToFirestore(json: json, collection: Constants.dataBucketSurveys, withIdentifier: identifier, onCompletion: nil)
     }
     
     /**
      Given a file, use the Firebase SDK to store it in Google Storage.
-    */
+     */
     func CKSendFiles(_ files: URL, result: [String:Any]) throws {
         if  let collection = result["identifier"] as? String,
             let taskUUID = result["taskRunUUID"] as? String {
             
             try CKSendHelper.sendToCloudStorage(files, collection: collection, withIdentifier: taskUUID)
+        }
+    }
+    
+    func sendWalkTaskResults(_ files: URL, result: [String: Any]) throws {
+        if let collection = result["identifier"] as? String,
+           let taskUUID = result["taskRunUUID"] as? String {
+            
+            // use the current date & time as the name of the folder in Cloud Storage
+            let now = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM-dd-yyyy_HH:mm"
+            let identifier = dateFormatter.string(from: now)
+            
+            try CKSendHelper.sendToCloudStorage(files, collection: collection, withIdentifier: identifier)
         }
     }
     
